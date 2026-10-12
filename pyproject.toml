@@ -1,0 +1,22 @@
+[project]
+name = "research-assistant"
+version = "0.1.0"
+description = "Research Assistant (RA) Slack bot: arXiv link cards with abstract and section tabs."
+requires-python = ">=3.11"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+dependencies = [
+    "beautifulsoup4",
+    "httpx",
+    "loguru",
+    "pylatexenc",
+    "pymupdf4llm",
+    "slack-bolt",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+markers = ["network: tests that fetch live pages from arxiv.org"]

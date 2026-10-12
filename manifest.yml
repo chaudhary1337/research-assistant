@@ -1,0 +1,20 @@
+display_information:
+  name: Research Assistant
+  description: Shows the title, authors, and full abstract for arXiv links.
+features:
+  bot_user:
+    display_name: RA
+  unfurl_domains:
+    - arxiv.org
+oauth_config:
+  scopes:
+    bot:
+      - links:read
+      - links:write
+settings:
+  event_subscriptions:
+    bot_events:
+      - link_shared
+  interactivity:
+    is_enabled: true
+  socket_mode_enabled: true
